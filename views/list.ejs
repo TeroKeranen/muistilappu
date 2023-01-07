@@ -11,5 +11,19 @@
 
     <h1> <%= thisDay %></h1>
     
+
+    <ul>
+        <li>moro</li>
+        <li>terver</li>
+        <% newList.forEach( function (item) { %>
+            <li><%= item %></li>
+        <% }) %>
+    </ul>
+
+    <form action="/" method="POST">
+        <input type="text" name="newItem">
+        <button type="submit" name="button">add</button>
+    </form>
+    
 </body>
 </html>
