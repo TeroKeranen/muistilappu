@@ -6,6 +6,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}))
 
+app.use(express.static("public"))
+
 app.set('view engine', 'ejs'); // set ejs to project
 
 mongoose.connect("mongodb+srv://testi:testi@cluster0.xecqchu.mongodb.net/muistilappu")
