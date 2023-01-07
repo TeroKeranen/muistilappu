@@ -12,13 +12,12 @@
     <h1> <%= thisDay %></h1>
     
 
-    <ul>
-        <li>moro</li>
-        <li>terver</li>
-        <% newList.forEach( function (item) { %>
-            <li><%= item %></li>
-        <% }) %>
-    </ul>
+    <% newItems.forEach(function (item) { %>
+        <form action="/delete" method="POST">
+            <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+            <p><%= item.name %></p>
+        </form>
+    <% }) %>
 
     <form action="/" method="POST">
         <input type="text" name="newItem">
