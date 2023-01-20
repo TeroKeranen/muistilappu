@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const dotenv = require('dotenv').config();
 const app = express(); 
-
+console.log("sss")
 app.use(bodyParser.urlencoded({extended:true}))
 
 app.use(express.static("public"))
