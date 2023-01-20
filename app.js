@@ -22,7 +22,7 @@ const itemsSchema = {
 
 const Item = mongoose.model("Item", itemsSchema)
 
-
+console.log(process.env.MONGODB_URI)
 app.get("/", (req,res ) => {
 
     let today = new Date();
@@ -84,6 +84,6 @@ app.post("/delete", (req,res) => {
 })
 
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT, function () {
     console.log("Server started on port 3000");
 })
