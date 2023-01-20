@@ -11,7 +11,7 @@ app.use(express.static("public"))
 app.set('view engine', 'ejs'); // set ejs to project
 
 // mongoose db
-const dbUser = process.env.MONGODB_URI
+const dbUser = "mongodb+srv://netninja:tero123@cluster0.xecqchu.mongodb.net/muistilappu?retryWrites=true&w=majority"
 mongoose.connect(dbUser, {useNewUrlParser: true})
     .then((result) => console.log("connected to db"))
     .catch((err) => console.log(err));
