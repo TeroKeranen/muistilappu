@@ -16,13 +16,14 @@ mongoose.connect(dbUser, {useNewUrlParser: true})
     .then((result) => console.log("connected to db"))
     .catch((err) => console.log(err));
 
-const itemsSchema = {
-    name: String
-}
+const Schema = mongoose.Schema;
+const itemsSchema = new Schema ({
+    name: String,
+})
 
 const Item = mongoose.model("Item", itemsSchema)
 
-console.log(process.env.MONGODB_URI)
+
 app.get("/", (req,res ) => {
 
     let today = new Date();
@@ -44,6 +45,7 @@ app.get("/", (req,res ) => {
         .catch((err) => {
             console.log(err)
         })
+    
     
 
 })
