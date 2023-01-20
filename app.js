@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
-
+const dotenv = require('dotenv').config();
 const app = express(); 
 
 app.use(bodyParser.urlencoded({extended:true}))
@@ -10,7 +10,11 @@ app.use(express.static("public"))
 
 app.set('view engine', 'ejs'); // set ejs to project
 
-mongoose.connect("mongodb+srv://testi:testi@cluster0.xecqchu.mongodb.net/muistilappu")
+// mongoose db
+const dbUser = process.env.MONGODB_URI
+mongoose.connect(dbUser, {useNewUrlParser: true})
+    .then((result) => console.log("connected to db"))
+    .catch((err) => console.log(err));
 
 const itemsSchema = {
     name: String
@@ -80,6 +84,6 @@ app.post("/delete", (req,res) => {
 })
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server started on port 3000");
 })
