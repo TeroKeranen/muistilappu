@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/abaabdeffa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles.css">
     <title>Document</title>
 </head>
@@ -19,20 +20,38 @@
 
             <div class="form-box">
                 <h2 class="form-box-h2">Add item</h1>
+                
 
-                <div class="form-container">
-                    <% if (newItems.length <= 0) { %>
+
+                    <% if (newItems.length <=0) { %>
                         <p> Aloita lisäämällä tuote listalle </p>
-                    <%} else { %>
-                        <% newItems.forEach(function (item) { %>
+                        <%} else { %>
+                            <% newItems.forEach(function (item) { %>
+                        <div class="form-container">
+                    
                         
                         
                             <form class="newItemForm" action="/delete" method="POST">
-                                <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+
+                                <label for="del">
+                                    <input type="checkbox" id="del" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+                                    <span><i class="fa-solid fa-trash"></i></span>
+
+                                </label>
+                                
                                 <p>
                                     <%= item.name %>
                                 </p>
+           
+
                             </form>
+
+                            
+                            
+
+                            
+                                
+                            
                             <% }) %>
                     <%} %>
                     
@@ -49,4 +68,15 @@
     </div>
     
 </body>
+
+<script>
+    
+    
+        
+        
+    
+        
+        
+    
+</script>
 </html>

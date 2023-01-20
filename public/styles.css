@@ -39,9 +39,11 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 
     
 }
+
 
 .newItemForm {
     border-bottom: 1px dotted black;
@@ -93,7 +95,21 @@ form {
     font-size: 1.5rem;
     color: white;
 }
+form label {
+    position:relative;
+    cursor:pointer;
+}
+form label input{
+    appearance: none;
+}
 
+form label span {
+    position:absolute;
+}
+
+.update-hide {
+    display:none;
+}
 .deleted-items-container {
 
 
