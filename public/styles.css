@@ -47,6 +47,10 @@ form {
 
 .newItemForm {
     border-bottom: 1px dotted black;
+    
+    display:flex;
+    align-items: center;
+    
 }
 .form-box-h2 {
     margin-bottom: 30px;
@@ -94,6 +98,7 @@ form {
 .form-container form p {
     font-size: 1.5rem;
     color: white;
+    padding: 1rem;
 }
 form label {
     position:relative;
@@ -145,8 +150,15 @@ form label span {
 
 
 }
+.addItem {
+    
+    margin: 30px 0;
+    
+}
 
-
+form [type="submit"] {
+    margin-left: 10px;
+}
 @media screen and (min-width: 1065px) {
 
     input[type="text"] {

@@ -35,7 +35,7 @@ app.get("/", (req,res ) => {
     }
 
     
-    let day = today.toLocaleString("en-US", options)
+    let day = today.toLocaleString("fi-FI", options)
 
 
     Item.find()
