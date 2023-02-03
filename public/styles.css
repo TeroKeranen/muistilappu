@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: white;
 }
@@ -67,7 +67,7 @@ form {
 
 
 .day {
-    padding: 2rem;
+    
     box-shadow: 10px 10px 150px rgb(250, 246, 246);
     text-align: center;
 }
